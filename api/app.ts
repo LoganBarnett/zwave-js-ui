@@ -1082,6 +1082,7 @@ app.get(
 		}
 
 		const settings = jsonStore.get(store.settings)
+    console.log(settings)
 
 		const data = {
 			success: true,
