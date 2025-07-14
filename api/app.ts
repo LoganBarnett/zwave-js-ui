@@ -1094,8 +1094,8 @@ app.get(
           },
         },
       },
-    }
-    delete settingsCopy.zwave.options.logConfig
+    };
+    delete settingsCopy.zwave.options.logConfig;
     console.log(settingsCopy)
     console.log(settingsCopy.zwave.options.logConfig)
 
