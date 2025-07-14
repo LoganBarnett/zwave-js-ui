@@ -1086,7 +1086,7 @@ app.get(
       ...settings,
       zwave: {
         ...settings.zwave,
-        {
+        options: {
           ...settings.zwave.options,
           logConfig: {
             ...settings.zwave.options.logConfig,
