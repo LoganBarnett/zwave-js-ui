@@ -1083,6 +1083,7 @@ app.get(
 
 		const settings = jsonStore.get(store.settings)
     console.log(settings)
+    console.log(settings.zwave.options.logConfig)
 
 		const data = {
 			success: true,
