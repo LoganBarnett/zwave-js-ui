@@ -1082,12 +1082,25 @@ app.get(
 		}
 
 		const settings = jsonStore.get(store.settings)
-    console.log(settings)
-    console.log(settings.zwave.options.logConfig)
+    const settingsCopy = {
+      ...settings,
+      zwave: {
+        ...settings.zwave,
+        {
+          ...settings.zwave.options,
+          logConfig: {
+            ...settings.zwave.options.logConfig,
+            transports: null,
+          },
+        },
+      },
+    }
+    console.log(settingsCopy)
+    console.log(settingsCopy.zwave.options.logConfig)
 
 		const data = {
 			success: true,
-			settings,
+			settings: settingsCopy,
 			devices: gw?.zwave?.devices ?? {},
 			serial_ports: [],
 			scales: scales,
